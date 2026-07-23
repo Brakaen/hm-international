@@ -21,11 +21,11 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-between h-24">
           
           <NavLink to="/" className="flex items-center gap-4 group">
-            <img 
-              src="/logo.png" 
-              alt="HM International" 
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
-            />
+           <img 
+             src="/logo.png" 
+             alt="HM International" 
+             className="h-12 w-auto object-contain bg-transparent mix-blend-screen contrast-125 transition-transform duration-300 group-hover:scale-105" 
+/>
             <div className="flex flex-col">
               <span className="font-display text-2xl lg:text-3xl font-bold tracking-tight text-gold-light">
                 HM INTERNATIONAL
