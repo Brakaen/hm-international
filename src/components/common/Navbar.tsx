@@ -1,18 +1,26 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { NAV_LINKS } from '../../data/siteData';
+
+// Direct-ah links-ah ingaye define panniyachu (siteData thevaiyilla)
+const NAV_LINKS = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Services', path: '/services' },
+  { label: 'Job Seeker', path: '/job-seeker' },
+  { label: 'Gallery', path: '/gallery' },
+ 
+  { label: 'Contact', path: '/contact' },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Form submit pannum pothu nadakkara velaigal
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Inga unga form submission logic (EmailJS / Backend API) podalam
     alert('Manpower request submitted successfully!');
-    setIsModalOpen(false); // Form send aanathum modal-ah close pannidum
+    setIsModalOpen(false);
   };
 
   return (
@@ -25,7 +33,7 @@ export default function Navbar() {
              src="/logo.png" 
              alt="HM International" 
              className="h-12 w-auto object-contain bg-transparent mix-blend-screen contrast-125 transition-transform duration-300 group-hover:scale-105" 
-/>
+          />
             <div className="flex flex-col">
               <span className="font-display text-2xl lg:text-3xl font-bold tracking-tight text-gold-light">
                 HM INTERNATIONAL
@@ -60,8 +68,7 @@ export default function Navbar() {
               Request Manpower
             </button>
           </nav>
-
-          {/* Mobile Menu Button */}
+      
           <button
             className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
             aria-label={open ? 'Close menu' : 'Open menu'}

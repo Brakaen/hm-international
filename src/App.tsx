@@ -7,13 +7,13 @@ import About from './pages/About';
 import ServicesPage from './pages/Services';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import Faq from './pages/Faq';
+import JobSeekers from './pages/JobSeekers';
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="flex min-h-screen flex-col font-body">
+      <div className="flex min-h-screen flex-col font-body bg-[#0B132B]">
         <Navbar />
         <main className="flex-1">
           <Routes>
@@ -22,7 +22,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/faq" element={<Faq />} />
+            <Route path="/job-seeker" element={<JobSeekers />} />
           </Routes>
         </main>
         <Footer />
