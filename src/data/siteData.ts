@@ -88,46 +88,63 @@ export const TESTIMONIALS: TestimonialItem[] = [
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
+  // Placements (3 items)
   {
     id: 'g1',
-    title: 'Candidate send-off, Trichy office',
-    imageUrl:
-      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60',
-    category: 'event',
-  },
-  {
-    id: 'g2',
-    title: 'Interview day at our office',
-    imageUrl:
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=60',
-    category: 'office',
-  },
-  {
-    id: 'g3',
-    title: 'Placement in UAE construction sector',
-    imageUrl:
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=60',
+    title: 'Candidate Departure at Trichy Airport',
+    imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80',
     category: 'placement',
   },
   {
+    id: 'g2',
+    title: 'Successful Gulf Placement Orientation',
+    imageUrl: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80',
+    category: 'placement',
+  },
+  {
+    id: 'g3',
+    title: 'Deployment Batch Ready for Travel',
+    imageUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    category: 'placement',
+  },
+
+  // Events (3 items)
+  {
     id: 'g4',
-    title: 'Pre-departure orientation session',
-    imageUrl:
-      'https://images.unsplash.com/photo-1560523159-4a9692d222f9?auto=format&fit=crop&w=800&q=60',
+    title: 'Overseas Career Guidance Seminar',
+    imageUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80',
     category: 'event',
   },
   {
     id: 'g5',
-    title: 'Hospitality placement, Qatar',
-    imageUrl:
-      'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=60',
-    category: 'placement',
+    title: 'Employer Interview Drive in Trichy',
+    imageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
+    category: 'event',
   },
   {
     id: 'g6',
-    title: 'Our consultancy team',
-    imageUrl:
-      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=60',
+    title: 'Skill Verification & Assessment Camp',
+    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',
+    category: 'event',
+  },
+
+  // Office (3 items)
+  {
+    id: 'g7',
+    title: 'Melapudur Office Consultation Desk',
+    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    category: 'office',
+  },
+  {
+    id: 'g8',
+    title: 'Documentation & Visa Support Team',
+    imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80',
+    category: 'office',
+  },
+  {
+    id: 'g9',
+    title: 'Client Welcome & Support Area',
+    imageUrl: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
     category: 'office',
   },
 ];
