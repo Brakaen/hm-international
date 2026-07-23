@@ -10,12 +10,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-ivory/95 backdrop-blur-md border-b border-gold/25 shadow-sm">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-between h-24">
         
-        {/* Brand Logo & Name (Enlarged) */}
+        
         <NavLink to="/" className="flex items-center gap-4 group">
           <img 
             src="/logo.png" 
             alt="HM International" 
-            className="h-14 w-14 rounded-full object-cover ring-2 ring-gold/40 transition-transform duration-300 group-hover:scale-105" 
+            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
           />
           <div className="flex flex-col">
             <span className="font-display text-2xl lg:text-3xl font-bold tracking-tight text-ink">
