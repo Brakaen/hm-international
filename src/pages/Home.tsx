@@ -3,7 +3,7 @@ import WhyChooseUs from '../components/home/WhyChooseUs';
 import Services from '../components/home/Services';
 import Countries from '../components/home/Countries';
 import Testimonials from '../components/home/Testimonials';
-import ApplyForm from '../components/common/ApplyForm';
+// import ApplyForm from '../components/common/ApplyForm';
 import CTA from '../components/home/CTA';
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <Services />
       <Countries />
       <Testimonials />
-      <ApplyForm />
+      {/* <ApplyForm /> */}
       <CTA />
     </>
   );
