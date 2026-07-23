@@ -68,7 +68,7 @@ export default function Hero() {
             />
             <circle cx="20" cy="110" r="5.5" fill="var(--color-gold-light)" />
             <text x="10" y="132" fill="var(--color-ivory)" fontSize="12" fontFamily="Inter, sans-serif" fontWeight="600" className="drop-shadow">
-              Tiruchirappalli
+              Tamil Nadu
             </text>
 
             <g>
