@@ -62,6 +62,8 @@ export const COUNTRIES: CountryItem[] = [
   { id: 'kuwait', name: 'Kuwait', flagEmoji: '🇰🇼' },
   { id: 'oman', name: 'Oman', flagEmoji: '🇴🇲' },
   { id: 'singapore', name: 'Singapore', flagEmoji: '🇸🇬' },
+  { id: 'malaysia', name: 'Malaysia', flagEmoji: '🇲🇾' },
+  { id: 'bahrain', name: 'Bahrain', flagEmoji: '🇧🇭' },
 ];
 
 export const TESTIMONIALS: TestimonialItem[] = [
@@ -172,7 +174,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'f4',
     question: 'Which countries do you place candidates in?',
     answer:
-      'We currently place candidates in the UAE, Saudi Arabia, Qatar, Kuwait, Oman, and Singapore, across construction, hospitality, healthcare, and skilled trades.',
+      'We currently place candidates in the UAE, Saudi Arabia, Qatar, Kuwait, Oman, Singapore, Malaysia, and Bahrain, across construction, hospitality, healthcare, and skilled trades.',
   },
   {
     id: 'f5',
