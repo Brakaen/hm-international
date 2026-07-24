@@ -1,5 +1,6 @@
-import { ShieldCheck, Award, Users, Globe2, Target, History, UserCheck, Briefcase } from 'lucide-react';
-
+// import { ShieldCheck, Award, Users, Globe2, Target, History, UserCheck, Briefcase } from 'lucide-react';
+// import { ShieldCheck, Globe2, Target, History, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Globe2, Target, History } from 'lucide-react';
 export default function About() {
   return (
     <div className="bg-ivory text-ink">
