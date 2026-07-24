@@ -1,15 +1,13 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-// Direct-ah links-ah ingaye define panniyachu (siteData thevaiyilla)
 const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Job Seeker', path: '/job-seeker' },
   { label: 'Gallery', path: '/gallery' },
- 
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -17,7 +15,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Manpower request submitted successfully!');
     setIsModalOpen(false);
@@ -26,19 +24,19 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-[#0B132B] backdrop-blur-md border-b border-gold/30 shadow-md">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-between h-24">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 flex items-center justify-between h-16 md:h-20">
           
-          <NavLink to="/" className="flex items-center gap-4 group">
+          <NavLink to="/" className="flex items-center gap-3 group">
            <img 
-             src="/logo.png" 
-             alt="HM International" 
-             className="h-12 w-auto object-contain bg-transparent mix-blend-screen contrast-125 transition-transform duration-300 group-hover:scale-105" 
+              src="/logo.jpeg" 
+              alt="HM International" 
+              className="h-10 md:h-12 w-auto object-contain bg-transparent mix-blend-screen contrast-125 transition-transform duration-300 group-hover:scale-105" 
           />
             <div className="flex flex-col">
-              <span className="font-display text-2xl lg:text-3xl font-bold tracking-tight text-gold-light">
+              <span className="font-display text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-gold-light">
                 HM INTERNATIONAL
               </span>
-              <span className="text-[11px] uppercase tracking-widest text-white font-medium">
+              <span className="text-[10px] md:text-[11px] uppercase tracking-widest text-white font-medium">
                 Global Manpower Solutions
               </span>
             </div>
@@ -63,7 +61,7 @@ export default function Navbar() {
             {/* Request Manpower Button - Opens Popup Modal */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="rounded-full bg-gold px-6 py-3 text-sm font-semibold text-ink tracking-wide hover:bg-gold-light shadow-md transition-all duration-300 cursor-pointer"
+              className="rounded-full bg-gold px-6 py-2.5 md:py-3 text-sm font-semibold text-ink tracking-wide hover:bg-gold-light shadow-md transition-all duration-300 cursor-pointer"
             >
               Request Manpower
             </button>
@@ -74,20 +72,20 @@ export default function Navbar() {
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X size={28} /> : <Menu size={28} />}
+            {open ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
 
         {/* Mobile Dropdown Menu */}
         {open && (
-          <nav className="md:hidden border-t border-gold/20 bg-[#0B132B] px-6 py-6 flex flex-col gap-5 shadow-lg">
+          <nav className="md:hidden border-t border-gold/20 bg-[#0B132B] px-6 py-5 flex flex-col gap-4 shadow-xl">
             {NAV_LINKS.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-base font-medium uppercase tracking-wide transition-colors ${
+                  `text-sm font-medium uppercase tracking-wide transition-colors ${
                     isActive ? 'text-gold-light font-semibold' : 'text-white/80 hover:text-gold-light'
                   }`
                 }

@@ -3,58 +3,58 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[90vh] md:min-h-screen flex items-center overflow-hidden text-ivory bg-[#0B132B]">
+    <section className="relative w-full bg-[#0B132B] text-ivory overflow-hidden">
       
-      {/* Background Video Animation with absolute full cover */}
-      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+      {/* Background Video Container - Absolute fill without gaps */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover scale-105 pointer-events-none"
+          className="w-full h-full object-cover scale-150 sm:scale-125 transform-gpu"
         >
           <source src="/airplane.mp4" type="video/mp4" />
         </video>
         
-        {/* Soft Dim Overlay for text readability */}
-        <div className="absolute inset-0 bg-ink/50 backdrop-blur-[0.5px]"></div>
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-[#0B132B]/80 backdrop-blur-[1px]"></div>
       </div>
 
       {/* faint gold texture overlay */}
-      <div className="pointer-events-none absolute inset-0 z-10 opacity-[0.05] bg-[radial-gradient(circle_at_20%_20%,var(--color-gold)_0,transparent_45%)]" />
+      <div className="pointer-events-none absolute inset-0 z-10 opacity-[0.06] bg-[radial-gradient(circle_at_20%_20%,var(--color-gold)_0,transparent_45%)]" />
 
-      {/* Hero Content */}
-      <div className="relative z-20 mx-auto max-w-6xl px-5 pt-28 pb-20 md:pt-36 md:pb-28 w-full">
-        <p className="font-body text-xs tracking-[0.3em] uppercase text-gold-light mb-5 font-semibold drop-shadow-sm">
+      {/* Hero Content - Exact fit wrapper */}
+      <div className="relative z-20 mx-auto max-w-6xl px-5 md:px-8 pt-4 pb-6 sm:py-12 lg:py-20 w-full flex flex-col">
+        <p className="font-body text-xs tracking-[0.3em] uppercase text-gold-light mb-2 font-semibold drop-shadow-sm">
           Employment Consultant · Tiruchirappalli
         </p>
-        <h1 className="font-display text-4xl md:text-6xl font-semibold leading-[1.1] max-w-2xl text-ivory drop-shadow-md">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-semibold leading-[1.15] max-w-2xl text-ivory drop-shadow-md">
           We take your career <span className="text-gold-light italic">overseas</span>, one
           careful placement at a time.
         </h1>
-        <p className="mt-6 max-w-xl text-ivory/90 text-base md:text-lg drop-shadow">
+        <p className="mt-3 sm:mt-4 max-w-xl text-ivory/90 text-sm sm:text-base md:text-lg drop-shadow">
           HM International connects skilled candidates with trusted employers across the Gulf and
           Southeast Asia — full support from documentation to your first day at work.
         </p>
 
-        <div className="mt-9 flex flex-wrap gap-4">
+        <div className="mt-5 sm:mt-8 flex flex-wrap gap-4">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-ink hover:bg-gold-light transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-ink hover:bg-gold-light transition-shadow shadow-xl"
           >
             Request Manpower <ArrowRight size={16} />
           </Link>
           <a
             href="#apply"
-            className="inline-flex items-center gap-2 rounded-full border border-gold-light/60 bg-ink/30 backdrop-blur-sm px-7 py-3.5 text-sm font-medium text-ivory hover:border-gold-light hover:bg-gold-light/25 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full border border-gold-light/60 bg-ink/30 backdrop-blur-sm px-7 py-3.5 text-sm font-medium text-ivory hover:border-gold-light hover:bg-gold-light/25 transition-all shadow-xl"
           >
             Apply for a Job
           </a>
         </div>
 
-        {/* Signature element: flight path landing at destination */}
-        <div className="mt-16 md:mt-24" aria-hidden="true">
+        {/* Signature element */}
+        <div className="mt-6 sm:mt-12 md:mt-16 opacity-90" aria-hidden="true">
           <svg viewBox="0 0 700 140" className="w-full max-w-2xl h-auto drop-shadow-lg">
             <path
               id="flightPath"
