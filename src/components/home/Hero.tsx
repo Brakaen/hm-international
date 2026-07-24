@@ -3,29 +3,29 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden text-ivory">
+    <section className="relative w-full min-h-[90vh] md:min-h-screen flex items-center overflow-hidden text-ivory bg-[#0B132B]">
       
-      {/* Background Video Animation */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      {/* Background Video Animation with absolute full cover */}
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover scale-105"
+          className="absolute inset-0 w-full h-full object-cover scale-105 pointer-events-none"
         >
           <source src="/airplane.mp4" type="video/mp4" />
         </video>
         
         {/* Soft Dim Overlay for text readability */}
-        <div className="absolute inset-0 bg-ink/40 backdrop-blur-[0.5px]"></div>
+        <div className="absolute inset-0 bg-ink/50 backdrop-blur-[0.5px]"></div>
       </div>
 
       {/* faint gold texture overlay */}
       <div className="pointer-events-none absolute inset-0 z-10 opacity-[0.05] bg-[radial-gradient(circle_at_20%_20%,var(--color-gold)_0,transparent_45%)]" />
 
       {/* Hero Content */}
-      <div className="relative z-20 mx-auto max-w-6xl px-5 pt-24 pb-20 md:pt-32 md:pb-28">
+      <div className="relative z-20 mx-auto max-w-6xl px-5 pt-28 pb-20 md:pt-36 md:pb-28 w-full">
         <p className="font-body text-xs tracking-[0.3em] uppercase text-gold-light mb-5 font-semibold drop-shadow-sm">
           Employment Consultant · Tiruchirappalli
         </p>
@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
 
         {/* Signature element: flight path landing at destination */}
-        <div className="mt-20 md:mt-24" aria-hidden="true">
+        <div className="mt-16 md:mt-24" aria-hidden="true">
           <svg viewBox="0 0 700 140" className="w-full max-w-2xl h-auto drop-shadow-lg">
             <path
               id="flightPath"
