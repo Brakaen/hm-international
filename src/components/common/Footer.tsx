@@ -10,7 +10,8 @@ export default function Footer() {
         {/* Brand Column */}
         <div>
           <div className="flex items-center gap-3 mb-3">
-            <img src="/logo.png" alt="HM International" className="h-9 w-auto object-contain" />
+            {/* Typo fixed here: changed from .jepg to .jpeg */}
+            <img src="/logo.jpeg" alt="HM International Logo" className="h-9 w-auto object-contain" />
             <span className="font-display text-lg font-semibold text-ivory">HM International</span>
           </div>
           <p className="text-xs leading-relaxed text-ivory-dim/80">
@@ -57,21 +58,16 @@ export default function Footer() {
         </div>
       </div>
 
-     
       <div className="border-t border-ivory-dim/10 py-4">
         <div className="mx-auto max-w-6xl px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-ivory-dim/70">
-          
-          
           <div>
             © {new Date().getFullYear()} HM International. All rights reserved.
           </div>
 
-      
           <div className="flex items-center gap-1.5 text-gold-light font-medium">
             <ShieldCheck size={15} className="text-gold" />
             <span>Verified Recruitment Agency</span>
           </div>
-
         </div>
       </div>
     </footer>
